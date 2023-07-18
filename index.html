@@ -26,14 +26,14 @@
     </style>
 </head>
 <body>
-    <h1>Station 5B</h1>
+    <h1>Deacidification of the Fresh Water</h1>
     <div id="question"></div>
     <div id="options"></div>
-    <button onclick="nextQuestion()">SUBMIT</button>
+    <button onclick="nextQuestion()">Submit</button>
     <script>
         // Function to clear the quiz score from local storage
 function clearQuizScore() {
-    localStorage.removeItem("Station_5B_Score");
+    localStorage.removeItem("Deacidification_Fresh_Water_1");
 }
 
 // Function to clear local storage when the tab is closed or refreshed
@@ -49,13 +49,13 @@ window.addEventListener('beforeunload', function() {
         const quiz = [
             {
                 question: "What colour is used to indicate the direction of the rinsing air on the control panel?",
-                options: ["yellow", "blue", "green"],
+                options: ["Yellow", "Blue", "Green"],
                 answer: 0
             }
         ];
 
         let currentQuestion = 0;
-        let Station_5B_Score = 0;
+        let Deacidification_Fresh_Water_1 = 0;
 
         // Function to display current question
         function displayQuestion() {
@@ -99,9 +99,9 @@ window.addEventListener('beforeunload', function() {
     }
 
     if (!isAnswered || selectedOption !== quiz[currentQuestion].answer) {
-        Station_5B_Score = 0; // Assign zero score if question is not attempted or answered incorrectly
+        Deacidification_Fresh_Water_1 = 0; // Assign zero score if question is not attempted or answered incorrectly
     } else {
-        Station_5B_Score++; // Increment score for correct answer
+        Deacidification_Fresh_Water_1++; // Increment score for correct answer
     }
 }
 
@@ -112,8 +112,8 @@ window.addEventListener('beforeunload', function() {
 
             if (currentQuestion === quiz.length) {
                 // All questions answered, store score in local storage
-                localStorage.setItem("Station_5B_Score", Station_5B_Score);
-                alert("Quiz completed. Your score is " + Station_5B_Score);
+                localStorage.setItem("Deacidification_Fresh_Water_1", Deacidification_Fresh_Water_1);
+                alert("Quiz completed. Your score is " + Deacidification_Fresh_Water_1);
             } else {
                 displayQuestion();
             }
